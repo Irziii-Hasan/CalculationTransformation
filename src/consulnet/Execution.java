@@ -4,7 +4,11 @@ public class Execution {
     public static void main(String[] args) {
 
         Calculator calculator = new Calculator();
-        int result = calculator.calculatorAction(3,7,'-');
+
+        calculator.getCalculationDetails(7,3,'=');
+        calculator.calculatorAction();
+        int result = calculator.getCalculationResult();
+
         System.out.println(result);
 
     }

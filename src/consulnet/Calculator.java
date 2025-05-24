@@ -5,28 +5,39 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    int result;
+    int firstNum, secondNum, result;
+    char operator;
 
-    Scanner sc = new Scanner(System.in);
+//    Scanner sc = new Scanner(System.in);
 
-    public int calculatorAction(int num1, int num2, char symbol) {
-        switch (symbol){
+    public void getCalculationDetails(int num1, int num2 , char symbol){
+        firstNum = num1;
+        secondNum = num2;
+        operator = symbol;
+
+    }
+
+    public void calculatorAction() {
+        switch (operator){
             case '+':
-                result= num1 + num2;
+                result= firstNum + secondNum;
                 break;
             case '-':
-                result= num1 - num2;
+                result= firstNum - secondNum;
                 break;
             case '*':
-                result= num1 * num2;
+                result= firstNum * secondNum;
                 break;
             case '/':
-                result= num1 / num2;
+                result= firstNum / secondNum;
                 break;
             default:
                 System.out.println("Invalid Symbol");
         }
+    }
 
+
+    public int getCalculationResult(){
         return result;
     }
 }
