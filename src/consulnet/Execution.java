@@ -7,7 +7,7 @@ public class Execution {
 
         calculator.getCalculationDetails(7,3,'=');
         calculator.calculatorAction();
-        int result = calculator.getCalculationResult();
+        float result = calculator.getCalculationResult();
 
         System.out.println(result);
 
